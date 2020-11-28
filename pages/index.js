@@ -40,7 +40,10 @@ export default function Home() {
       <Head>
         <title>Choices</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Decisions?"></meta>
+        <meta
+          name="description"
+          content="Making decisions all day is hard."
+        ></meta>
         <meta
           name="keywords"
           content="decision fatigue,decision,choice,decisions"
