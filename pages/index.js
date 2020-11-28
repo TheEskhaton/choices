@@ -65,7 +65,11 @@ export default function Home() {
             className={`bg-${color}-900 text-center flex justify-center space-y-4 flex-col items-center h-full`}
           >
             <animated.div style={transitions[0].props}>
-              <h1 className={`text-${color}-200 h-full text-8xl`}>{heading}</h1>
+              <h1 className={`text-${color}-200 h-full sm:text-8xl text-6xl`}>
+                
+                {heading}
+              
+              </h1>
             </animated.div>
             {currentStep === 0 && (
               <TwoChoices
@@ -117,7 +121,7 @@ export default function Home() {
           Reset
         </button>
         <div
-          className={`text-sm text-${color}-300 mb-3 absolute bottom-0 left-1/2 -ml-36`}
+          className={`text-sm text-${color}-300 mb-3 absolute bottom-0 sm:left-1/2 sm:-ml-36 right-1`}
         >
           Made with ❤️ by{" "}
           <a

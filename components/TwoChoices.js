@@ -14,7 +14,9 @@ const TwoChoices = ({
   return (
     <>
       <animated.div style={animateStyle}>
-        <h1 className={`text-${colorContext.color}-200 h-full text-4xl`}>
+        <h1
+          className={`text-${colorContext.color}-200 h-full sm:text-4xl text-3xl`}
+        >
           {question}
         </h1>
       </animated.div>
