@@ -40,6 +40,13 @@ export default function Home() {
       <Head>
         <title>Choices</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Decisions?"></meta>
+        <meta
+          name="keywords"
+          content="decision fatigue,decision,choice,decisions"
+        ></meta>
+        <meta name="og:title" content="Choices"></meta>
+        <meta name="og:image" content="/social_scr.png"></meta>
       </Head>
       <ColorContext.Provider
         value={{
@@ -53,7 +60,7 @@ export default function Home() {
           >
             <animated.div style={transitions[0].props}>
               <h1 className={`text-${color}-200 h-full text-8xl`}>{heading}</h1>
-            </animated.div >
+            </animated.div>
             {currentStep === 0 && (
               <TwoChoices
                 animateStyle={transitions[0].props}
@@ -96,11 +103,26 @@ export default function Home() {
               <Fatigue animateStyle={transitions[0].props}></Fatigue>
             )}
           </div>
-         
         </div>
-        <button onClick={() => window.location.reload()} className={`bg-${color}-700 m-3 text-sm text-gray-100 rounded-full h-12 w-12 absolute bottom-0 left-0 focus:outline-none focus:ring-2 focus:ring-white-200`}>Reset</button>
-        <div className={`text-sm text-${color}-300 mb-3 absolute bottom-0 left-1/2 -ml-36`}>Made with ❤️ by <a className="underline" target="_blank" href="https://twitter.com/TheEskhaton1">this guy right here</a></div>
-       </ColorContext.Provider>
+        <button
+          onClick={() => window.location.reload()}
+          className={`bg-${color}-700 m-3 text-sm text-gray-100 rounded-full h-12 w-12 absolute bottom-0 left-0 focus:outline-none focus:ring-2 focus:ring-white-200`}
+        >
+          Reset
+        </button>
+        <div
+          className={`text-sm text-${color}-300 mb-3 absolute bottom-0 left-1/2 -ml-36`}
+        >
+          Made with ❤️ by{" "}
+          <a
+            className="underline"
+            target="_blank"
+            href="https://twitter.com/TheEskhaton1"
+          >
+            this guy right here
+          </a>
+        </div>
+      </ColorContext.Provider>
     </div>
   );
 }
