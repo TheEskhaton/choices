@@ -46,7 +46,10 @@ export default function Home() {
           content="decision fatigue,decision,choice,decisions"
         ></meta>
         <meta name="og:title" content="Choices"></meta>
-        <meta name="og:image" content="/social_scr.png"></meta>
+        <meta
+          name="og:image"
+          content="https://choices.codejuration.com/social_scr.png"
+        ></meta>
       </Head>
       <ColorContext.Provider
         value={{
