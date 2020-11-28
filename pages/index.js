@@ -5,7 +5,7 @@ import ColorChoice from "../components/ColorChoice";
 import SongChoice from "../components/SongChoice";
 import TwoChoices from "../components/TwoChoices";
 import Fatigue from "../components/Fatigue";
-import {useChain, useSpring, animated, useTransition} from 'react-spring'
+import { useChain, useSpring, animated, useTransition } from "react-spring";
 
 export const ColorContext = React.createContext();
 
@@ -16,24 +16,23 @@ export default function Home() {
   const [color, setColor] = useState("green");
   const [currentStep, setCurrentStep] = useState(0);
 
-  const transitions = useTransition(currentStep, p => p, {
-    from: { opacity: 0},
-    enter: { opacity: 1},
+  const transitions = useTransition(currentStep, (p) => p, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
     leave: { opacity: 1 },
-    config: { mass: 100, clamp: true},
-    onDestroyed: () => console.log('destroyed')
+    config: { mass: 100, clamp: true },
+    onDestroyed: () => console.log("destroyed"),
   });
-  
-  const advanceStep = (onAdvance) => {
-      if(transitions[0].props.opacity.done) {
-        onAdvance && onAdvance();
-        setHeading((heading) =>
-          heading === "Choices." ? "Decisions." : "Choices."
-        );
-        setCurrentStep((step) => step + 1);
-      }
-  };
 
+  const advanceStep = (onAdvance) => {
+    if (transitions[0].props.opacity.done) {
+      onAdvance && onAdvance();
+      setHeading((heading) =>
+        heading === "Choices." ? "Decisions." : "Choices."
+      );
+      setCurrentStep((step) => step + 1);
+    }
+  };
 
   return (
     <div>
@@ -61,14 +60,20 @@ export default function Home() {
         }}
       >
         <div className="flex h-screen w-full flex-col justify-center relative">
+          <a href="https://github.com/TheEskhaton/choices">
+            <img
+              alt="GitHub project"
+              target="_blank"
+              className="absolute top-0 right-0 mr-2 mt-2 w-8 h-8 opacity-40 hover:opacity-100"
+              src="/GitHub-Mark-Light-32px.png"
+            ></img>
+          </a>
           <div
             className={`bg-${color}-900 text-center flex justify-center space-y-4 flex-col items-center h-full`}
           >
             <animated.div style={transitions[0].props}>
               <h1 className={`text-${color}-200 h-full sm:text-8xl text-6xl`}>
-                
                 {heading}
-              
               </h1>
             </animated.div>
             {currentStep === 0 && (
