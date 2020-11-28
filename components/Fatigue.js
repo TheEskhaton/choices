@@ -30,7 +30,7 @@ const Fatigue = () => {
         className={`flex flex-col space-x-3 text-2xl text-${colorContext.color}-200`}
       >
         <span className="text-left mb-4 p-4">
-          <ul className="list-disc list-inside">
+          <ul className="sm:list-disc list-none flex flex-col space-y-2">
             <li>Plan daily decisions the night before.</li>
             <li>Do the most important thing first.</li>
             <li>Stop making decisions. Start making commitments. </li>

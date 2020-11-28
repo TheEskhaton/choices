@@ -17,14 +17,14 @@ const Song = ({ url, index, onPlay, isPlaying = false, onSongChosen }) => {
     <div className="flex flex-col items-center m-4 w-24">
       <audio loop ref={audioRef} src={url}></audio>
       <button
-        onClick={onSongChosen}
-        className={`focus:outline-none m-2 text-${colorContext.color}-50 bg-${colorContext.color}-600 rounded-full h-9 w-9 border-${colorContext.color}-300 border-4 focus:ring-4 focus:ring-${colorContext.color}-500 focus:ring-opacity-50 font-mono`}
+        onClick={() => (onPlay ? onPlay() : "")}
+        className={`text-xl focus:outline-none m-2 text-${colorContext.color}-50 bg-${colorContext.color}-600 rounded-full h-9 w-9 border-${colorContext.color}-300 border-4 focus:ring-4 focus:ring-${colorContext.color}-500 focus:ring-opacity-50 font-mono`}
       >
         {index}
       </button>
       <button
         onClick={() => (onPlay ? onPlay() : "")}
-        className={`relative focus:outline-none text-${colorContext.color}-50 bg-${colorContext.color}-600 rounded-md px-2 border-${colorContext.color}-300 border-4 focus:ring-4 focus:ring-${colorContext.color}-500 focus:ring-opacity-50 font-mono`}
+        className={`text-2xl relative focus:outline-none text-${colorContext.color}-50 bg-${colorContext.color}-600 rounded-md px-2 border-${colorContext.color}-300 border-4 focus:ring-4 focus:ring-${colorContext.color}-500 focus:ring-opacity-50 font-mono`}
       >
         <span
           className={`${

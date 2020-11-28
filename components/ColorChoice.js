@@ -54,7 +54,7 @@ const ColorChoice = ({
       </animated.div>
       <animated.button
         onClick={() => onNext()}
-        className={`font-mono text-${colorContext.color}-50 bg-${colorContext.color}-600 px-2 py-1 rounded`}
+        className={`font-mono text-${colorContext.color}-50 bg-${colorContext.color}-600 px-2 py-1 rounded-md text-xl`}
         style={animateStyle}
       >
         Continue

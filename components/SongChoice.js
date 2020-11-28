@@ -54,7 +54,16 @@ const SongChoice = ({ onSongChosen, currentStep, animateStyle }) => {
           url={" https://freepd.com/music/Study and Relax.mp3"}
           onSongChosen={onSongChosen}
         ></Song>
+
       </animated.div>
+      
+      <animated.button
+          style={animateStyle}
+          onClick={onSongChosen}
+          className={`px-2 py-1 text-xl rounded-lg focus:outline-none m-2 text-${colorContext.color}-50 bg-${colorContext.color}-600 border-${colorContext.color}-300 border-4 focus:ring-4 focus:ring-${colorContext.color}-500 focus:ring-opacity-50 font-mono ${currentStep !== 3 ? "hidden" : ""}`}
+        >
+          That one
+        </animated.button>
     </>
   );
 };
