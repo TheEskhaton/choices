@@ -21,15 +21,15 @@ const Fatigue = () => {
       </animated.h2>
       <animated.h3
         style={textAnimationProps}
-        className={`text-${colorContext.color}-200 text-xl`}
+        className={`text-${colorContext.color}-200 text-lg`}
       >
         Probably not.
       </animated.h3>
       <animated.span
         style={textAnimationProps}
-        className={`flex flex-col space-x-3 text-2xl text-${colorContext.color}-200`}
+        className={`flex flex-col space-x-3 text-xl text-${colorContext.color}-200`}
       >
-        <span className="text-left mb-4 p-4">
+        <span className="text-left mb-4 m-5 p-4">
           <ul className="sm:list-disc list-none flex flex-col space-y-2">
             <li>Plan daily decisions the night before.</li>
             <li>Do the most important thing first.</li>
@@ -37,7 +37,7 @@ const Fatigue = () => {
             <li>Simplify.</li>
           </ul>
         </span>
-        <span className="text-4xl">
+        <span className="text-3xl mb-8">
           <a
             className={`underline`}
             target="_blank"
